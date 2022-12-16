@@ -3,7 +3,7 @@ import java.util.ArrayList; // import the ArrayList class
 
 public class InvoiceHeader {
     private String customer;
-    private int num;
+    private Integer num;
     private String date;
 
     private ArrayList<InvoiceLine> InLine = new ArrayList<InvoiceLine>();
@@ -21,6 +21,14 @@ public class InvoiceHeader {
 
     public void setNum(int num) {
         this.num = num;
+    }
+
+    public ArrayList<InvoiceLine> getInLine() {
+        return InLine;
+    }
+
+    public void setInLine(ArrayList<InvoiceLine> inLine) {
+        InLine = inLine;
     }
 
     public String getDate() {

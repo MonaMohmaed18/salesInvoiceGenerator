@@ -12,7 +12,7 @@ public class TransactionHistory extends JFrame {
     private JButton btn1;
    private String[] cols={"InvoiceNum","InvoiceDate","CustomerName","ItemName","ItemPrice","ItemCount"};
     private String[] []data={
-            {"1","1","1","1","1","1"}
+            {"","","","","",""}
     };
     public TransactionHistory (){
         super("Table demo");

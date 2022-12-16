@@ -13,16 +13,62 @@ public class NewInvoice extends JFrame  {
     private JButton btn1 ;
     private JTextField InvoiceNum;
     private JTextField CustomerName;
-    private JTextField ItemName;
-    private JTextField ItemPrice;
-    private JTextField ItemCount;
+//    private JTextField ItemName;
+//    private JTextField ItemPrice;
+//    private JTextField ItemCount;
     private JTextField InvoiceDate;
 
-    private JMenu file;
+// setter and getter
+    public String getInvoiceNum() {
+        return InvoiceNum.getText();
+    }
 
+    public void setInvoiceNum(JTextField invoiceNum) {
+        InvoiceNum = invoiceNum;
+    }
 
+    public String getInvoiceDate() {
+      // System.out.println(InvoiceDate.getText());
+        return InvoiceDate.getText();
+    }
 
+    public void setInvoiceDate(JTextField invoiceDate) {
+        InvoiceDate = invoiceDate;
+    }
 
+//    public String getItemCount() {
+//        return ItemCount.getText();
+//    }
+//
+//    public void setItemCount(JTextField itemCount) {
+//        ItemCount = itemCount;
+//    }
+//
+//    public String getItemPrice() {
+//        return ItemPrice.getText();
+//    }
+//
+//    public void setItemPrice(JTextField itemPrice) {
+//        ItemPrice = itemPrice;
+//    }
+//
+//    public String getItemName() {
+//        return ItemName.getText();
+//    }
+//
+//    public void setItemName(JTextField itemName) {
+//        ItemName = itemName;
+//    }
+
+    public String getCustomerName() {
+        return CustomerName.getText();
+    }
+
+    public void setCustomerName(JTextField customerName) {
+        CustomerName = customerName;
+    }
+
+    // Constractor
     public NewInvoice(){
         super("NewInvoice");
         //file=new JMenu("save");
@@ -38,27 +84,29 @@ public class NewInvoice extends JFrame  {
         CustomerName=new JTextField(15);
         add(CustomerName);
 
-        add(new JLabel("ItemName"));
-        ItemName=new JTextField(15);
-        add(ItemName);
-
-        add(new JLabel("ItemPrice"));
-        ItemPrice=new JTextField(15);
-        add(ItemPrice);
-
-        add(new JLabel("ItemCount"));
-        ItemCount=new JTextField(15);
-        add(ItemCount);
+//        add(new JLabel("ItemName"));
+//        ItemName=new JTextField(15);
+//        add(ItemName);
+//
+//        add(new JLabel("ItemPrice"));
+//        ItemPrice=new JTextField(15);
+//        add(ItemPrice);
+//
+//        add(new JLabel("ItemCount"));
+//        ItemCount=new JTextField(15);
+//        add(ItemCount);
 
         btn1= new JButton("ok");
         setLayout(new FlowLayout());
         add(btn1);
-        btn1.addActionListener(new ActionListener() {
+        btn1.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+            InvoiceController ii= new InvoiceController();
+             ii.fileSave("C:\\Users\\user\\IdeaProjects\\salesInvoiceGenerator\\Invoices.csv");
                 JOptionPane.showMessageDialog(null,"data is successfully stored","dialog",
                   JOptionPane.INFORMATION_MESSAGE);
-                Frame1 x = new Frame1( );
+                Line x = new Line( );
                 x.show();
                 dispose();
             }
@@ -71,7 +119,17 @@ public class NewInvoice extends JFrame  {
     }
 
 
-    }
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+//       InvoiceController ii= new InvoiceController();
+//                ii.fileSave("C:\\Users\\user\\IdeaProjects\\salesInvoiceGenerator\\Invoices.Invoicescsv");
+//        JOptionPane.showMessageDialog(null,"data is successfully stored","dialog",
+//                JOptionPane.INFORMATION_MESSAGE);
+//        Line x = new Line( );
+//        x.show();
+//        dispose();
+//    }
+}
 
 
 

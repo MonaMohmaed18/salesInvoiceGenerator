@@ -1,5 +1,6 @@
 package model;
 
+//import controller.InvoiceController;
 import controller.InvoiceController;
 import view.Frame1;
 import view.NewInvoice;
@@ -10,13 +11,10 @@ import java.awt.event.ActionEvent;
 
 public class Main {
     public static void main(String[] args) {
-        Frame1 f = new Frame1( );
-        f.setVisible(true);
+        InvoiceController i=new InvoiceController();
+        i.start_program();
+        //System.out.println(Inheader.getInvoiceDate());
 
-//        NewInvoice f=new NewInvoice();
-//        f.setVisible(true);
-//        TransactionHistory t= new TransactionHistory();
-//        t.setVisible(true);
 
 
     }

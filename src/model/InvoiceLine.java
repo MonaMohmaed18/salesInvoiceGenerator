@@ -2,10 +2,10 @@ package model;
 
 public class InvoiceLine {
 
-    private int num;
+    private Integer num;
     private String Item;
-    private double price;
-    private int count;
+    private Double price;
+    private Integer count;
 
 
     public int getCount() {
